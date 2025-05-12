@@ -1,5 +1,6 @@
 package CompitiPerCasa.nr2;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -25,7 +26,11 @@ public class Es2 {
 
         } catch (ArithmeticException e) {
             System.out.println("Errore:"+ e.getMessage());
-        } catch (Exception e) {
+
+        }catch (InputMismatchException e){
+            System.out.println("cado malato");
+        }
+        catch (Exception e) {
             System.out.println("Errore generico: " + e.getMessage());
         }
     }

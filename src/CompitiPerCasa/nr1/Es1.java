@@ -1,5 +1,6 @@
 package CompitiPerCasa.nr1;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 /*
@@ -18,12 +19,12 @@ public class Es1 {
         // instanzo un array di 5 interi
         int [] arrayNumeri = new int[5];
 
-        Random numeriRandom= new Random();
+        Random numeriRandom= new Random(); // creo un oggetto della classe Random
 
         Scanner scanner = new Scanner(System.in);
         // popolo l`array numeri con numeri casuali
         for (int i = 0; i < arrayNumeri.length ; i++) {
-            arrayNumeri[i]= numeriRandom.nextInt(10)+1;
+            arrayNumeri[i]= numeriRandom.nextInt(1,10);// vado a creare un numero randomico tra 1 e 10
 
         }
 
@@ -45,7 +46,10 @@ public class Es1 {
 
             }catch (ArrayIndexOutOfBoundsException e){
                 System.out.println("Errore: posizione fuori dall'array!");
-                System.out.println(e.getMessage());
+
+            }catch (InputMismatchException e){
+                System.out.println("CADO MALATO TI HO CHIESTO UN NUMERO NON UNA STRINGA"+e.getMessage());
+                scanner.nextLine();
             }
         }
 
