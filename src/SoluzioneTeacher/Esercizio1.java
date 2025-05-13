@@ -1,10 +1,15 @@
 package SoluzioneTeacher;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Esercizio1 {
+
+
 
     public static void main(String[] args) {
         int[] numeri = new int[5];
